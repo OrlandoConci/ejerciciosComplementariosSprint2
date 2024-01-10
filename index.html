@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta nem="description" content="Página de ejercicios complementarios de eventos en MindHub módulo 2.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Eventos</title>
+</head>
+<body class="bg-gray-700  m-11">
+    <header class="bg-gray-500 border-2 border-white font-bold text-center p-10 underline">
+        <h1 class="text-2xl">EJERCICIOS COMPLEMENTARIOS</h1>
+    </header>
+    <main class="flex flex-col gap-8 py-11">
+        <div class="flex flex-col w-32 border-4 border-black items-center p-2 bg-white">
+            <div id="cajaColor" class="text-center font-bold w-28 h-24 p-3 rounded-2xl border-2 border-black bg-[gray]">Gray</div>
+            <button id="botonColor" class="m-5 text-center h-7 self-center font-bold px-3 border border-black shadow-[-5px_4px_2px_black] bg-yellow-300">Change</button>
+        </div>
+
+        <form id="formularioTexto" class="flex flex-col w-60 border-4 border-black items-center p-2 bg-white">
+            <label from="cajaTexto" id="impresionTexto" class="text-center font-bold w-52 h-52 p-3 rounded-2xl border-2 border-black bg-[gray]"></label>
+            <textarea name="cajaTexto" cols="5" rows="5" maxlength="150" placeholder="Ingrese un comentario" id="cajaTexto" class="max-w-52 min-w-52 border mt-5 min-h-52 max-h-52"></textarea>
+            <button id="borrarTexto" class="m-5 text-center h-7 self-center font-bold px-3 border border-black shadow-[-5px_4px_2px_black] bg-yellow-300">Reset</button>
+        </form>
+
+        <form id="formularioMasaCorporal" class="flex gap-20">
+            <div class="flex flex-col gap-2 w-60 border-4 border-black p-5 bg-white">
+                <label class="font-bold" from="cajaEstatura" >Estatura</label>
+                <sub class="text-slate-500">en centímetros</sub>
+                <input type="number" max="9999" min="1" class="text-center mt-5 border-4 border-slate-400 rounded" name="estatura" placeholder="Escriba aquí.." id="cajaEstatura"></input>
+
+                <label class="font-bold mt-8" from="cajaPeso" >Peso</label>
+                <sub class="text-slate-500">en kilogramos</sub>
+                <input type="number" max="9999" min="1" class="text-center mt-5 border-4 border-slate-400 rounded" name="estatura" placeholder="Escriba aquí.." id="cajaPeso"></input>
+                
+                <button id="calculate" class="m-5 text-center h-7 self-center font-bold px-3 border border-black shadow-[-5px_4px_2px_black] bg-yellow-300">Calculate</button>
+            </div>
+
+            <div class="flex flex-col w-60 max-h-36 gap-2 border-4 border-black p-5 bg-white">
+                <p class="font-bold">Resultado</p>
+                <sub class="text-slate-500">su índice de masa corporal es</sub>
+                <div class="text-center mt-5 border-4 h-8 text-center border-slate-400 rounded" id="cajaResultado"></div>
+            </div>
+
+        </form>
+
+        <div class="flex flex-wrap gap-8">
+            <form id="localDolar" class="flex flex-col gap-2 w-60 border-4 border-black p-5 bg-white">
+                <label class="font-bold" form="monedaLocal1">Moneda Local</label>
+                <sub class="text-slate-500">sin comas ni puntos</sub>
+                <input type="number" class="text-center mt-5 border-4 border-slate-400 rounded" placeholder="Moneda Local.." id="monedaLocal1"></input>
+            
+                <p class="font-bold">Dólares</p>
+                <sub class="text-slate-500">sin comas ni puntos</sub>
+                <div class="text-center mt-5 border-4 h-8 text-center border-slate-400 rounded" id="monedaDolar1">0</div>
+
+                <div class="flex gap-3 justify-center mt-5">
+                    <button id="botonConvert1" class="text-center h-7 self-center font-bold px-3 border border-black shadow-[-5px_4px_2px_black] bg-yellow-300">Convert</button>
+                    <button id="botonDelete1" class="text-center h-7 self-center font-bold px-3 border border-black shadow-[-5px_4px_2px_black] bg-yellow-300">Delete</button>
+                </div>
+            </form>
+
+            <form id="dolarLocal" class="flex flex-col gap-2 w-60 border-4 border-black p-5 bg-white">
+                <label class="font-bold" form="monedaDolar2">Dólares</label>
+                <sub class="text-slate-500">sin comas ni puntos</sub>
+                <input type="number" class="text-center mt-5 border-4 border-slate-400 rounded" placeholder="Dólares.." id="monedaDolar2"></input>
+
+                <p class="font-bold">Moneda Local</p>
+                <sub class="text-slate-500">sin comas ni puntos</sub>
+                <div class="text-center mt-5 border-4 h-8 text-center border-slate-400 rounded" id="monedaLocal2">0</div>
+
+                <div class="flex gap-3 justify-center mt-5">
+                    <button id="botonConvert2" class="text-center h-7 self-center font-bold px-3 border border-black shadow-[-5px_4px_2px_black] bg-yellow-300">Convert</button>
+                    <button id="botonDelete2" class="text-center h-7 self-center font-bold px-3 border border-black shadow-[-5px_4px_2px_black] bg-yellow-300">Delete</button>
+                </div>
+            </form>
+        
+        </div>
+        <script src="./index.js"></script>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
